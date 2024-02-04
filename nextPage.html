@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I Knew It Pookiee Bear</title>
+  <style>
+    body {
+      font-family: 'Indie Flower', cursive;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      animation: colorChange 10s infinite alternate;
+      background: url('https://64.media.tumblr.com/bb52491bb4001d07c4f7542c44649f8a/940908fe8c3a4fcd-3e/s540x810/8439d3125bc1ac5fa63418b8e2a6eb5f3008b185.gif') center center fixed no-repeat;
+      background-size: cover;
+    }
+
+    @keyframes colorChange {
+      0% {
+        background-color: #ffcccc;
+      }
+      50% {
+        background-color: #d0f6af;
+      }
+      100% {
+        background-color: #94d4eb;
+      }
+    }
+
+    h2, #subheading {
+      text-align: center;
+      font-size: 2em;
+      margin: 0;
+      padding: 10px;
+      display: inline-block;
+      animation: headingAnimation 4s infinite alternate;
+      color: #5733ff;
+      text-shadow: 2px 2px 4px #000;
+    }
+
+    @keyframes headingAnimation {
+      0% {
+        color: #e894b6;
+        transform: translateZ(20px);
+      }
+      50% {
+        color: #e48144;
+        transform: translateZ(40px);
+      }
+      100% {
+        color: #bef78f;
+        transform: translateZ(20px);
+      }
+    }
+
+    #gifContainer {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    #pookieeGif {
+      width: 60%;
+      max-width: 400px;
+    }
+
+    #subheading {
+      font-size: 1.5em;
+      margin-top: 10px;
+    }
+
+    .socialContainer {
+      display: flex;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .socialButton {
+      font-size: 16px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      color: white;
+      text-decoration: none;
+    }
+
+    .instagram {
+      background: linear-gradient(to right, #405DE6, #5851DB, #833AB4); /* Instagram gradient */
+    }
+
+    .tiktok {
+      background: linear-gradient(to right, #69C9D0, #4891D9, #5B63AF); /* TikTok gradient */
+    }
+  </style>
+</head>
+<body>
+  <h2>I knew it Pookiee Bear</h2>
+
+  <div id="gifContainer">
+    <img id="pookieeGif" src="cat6.gif" alt="Pookiee GIF">
+  </div>
+
+  <p id="subheading">Message Him:</p>
+
+  <div class="socialContainer">
+    <a class="socialButton instagram" href="https://www.instagram.com/ctal.lua/">Instagram</a>
+    <a class="socialButton tiktok" href="https://www.tiktok.com/@ctalxd">TikTok</a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apologies</title>
+  <style>
+    body {
+      font-family: 'Indie Flower', cursive;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      animation: colorChange 10s infinite alternate;
+      background: url('https://64.media.tumblr.com/bb52491bb4001d07c4f7542c44649f8a/940908fe8c3a4fcd-3e/s540x810/8439d3125bc1ac5fa63418b8e2a6eb5f3008b185.gif') center center fixed no-repeat;
+      background-size: cover;
+    }
+
+    @keyframes colorChange {
+      0% {
+        background-color: #ffcccc;
+      }
+      50% {
+        background-color: #d0f6af;
+      }
+      100% {
+        background-color: #94d4eb;
+      }
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2em;
+      margin: 0;
+      padding: 10px;
+      display: inline-block;
+      animation: headingAnimation 4s infinite alternate;
+      color: #5733ff;
+      text-shadow: 2px 2px 4px #000;
+    }
+
+    @keyframes headingAnimation {
+      0% {
+        color: #ff5733;
+        transform: translateZ(20px);
+      }
+      50% {
+        color: #f193cd;
+        transform: translateZ(40px);
+      }
+      100% {
+        color: #5733ff;
+        transform: translateZ(20px);
+      }
+    }
+
+    #apologyGifContainer {
+      text-align: center;
+    }
+
+    #apologyGif {
+      width: 60%;
+      max-width: 200px;
+    }
+
+    #buttonContainer {
+      display: flex;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    #yesButton, #noButton {
+      font-size: 16px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    #yesButton {
+      background-color: #4CAF50; /* Green background color */
+      color: white; /* White text color */
+    }
+
+    #noButton {
+      background-color: #FF5733; /* Orange background color */
+      color: white; /* White text color */
+    }
+
+    #yesButton:hover, #noButton:hover {
+      background-color: #555; /* Darker background on hover */
+    }
+
+    /* Media Query for smaller screens */
+    @media only screen and (max-width: 600px) {
+      h2 {
+        font-size: 1.5em; /* Adjust font size for smaller screens */
+      }
+    }
+  </style>
+</head>
+<body>
+  <h2>I'm Extremely Sorry Gyanu!!!<br>Do you accept my Apology?</h2>
+
+  <div id="apologyGifContainer">
+    <img id="apologyGif" src="cat.gif" alt="Apology GIF">
+  </div>
+
+  <div id="buttonContainer">
+    <button onclick="handleYesClick()" id="yesButton">Yes</button>
+    <button onclick="handleNoClick()" id="noButton">No</button>
+  </div>
+
+  <script>
+    function handleYesClick() {
+      // Redirect to the next page (update the URL accordingly)
+      window.location.href = 'nextPage.html';
+    }
+
+    function handleNoClick() {
+      const noButton = document.getElementById('noButton');
+
+      function loopBackToAreYouSure() {
+        noButton.innerText = 'Are you sure?';
+        noButton.onclick = function() {
+          noButton.innerText = "Don't do this to me Pookie";
+          noButton.onclick = function() {
+            noButton.innerText = "Let's talk again? No?";
+            noButton.onclick = function() {
+              noButton.innerText = "Please Gyanu!!!";
+              noButton.onclick = function() {
+                noButton.innerText = "No? Gyanu?";
+                noButton.onclick = function() {
+                  noButton.innerText = 'No?';
+                  noButton.onclick = function() {
+                    loopBackToAreYouSure();
+                  };
+                };
+              };
+            };
+          };
+        };
+        handleNoButtonClick(); // Added for random positioning
+      }
+
+      function resetToOriginal() {
+        loopBackToAreYouSure();
+      }
+
+      noButton.innerText = 'Are you sure?';
+      noButton.onclick = function() {
+        noButton.innerText = "Don't do this to me Pookie";
+        noButton.onclick = function() {
+          noButton.innerText = "Let's talk again? No?";
+          noButton.onclick = function() {
+            noButton.innerText = "Please Gyanu!!!";
+            noButton.onclick = function() {
+              noButton.innerText = "No? Gyanu?";
+              noButton.onclick = function() {
+                noButton.innerText = 'No?';
+                noButton.onclick = function() {
+                  resetToOriginal();
+                };
+              };
+            };
+          };
+        };
+        handleNoButtonClick(); // Added for random positioning
+      };
+    }
+
+    function handleNoButtonClick() {
+      const noButton = document.getElementById('noButton');
+
+      function randomPosition() {
+        const viewportWidth = window.innerWidth;
+        const viewportHeight = window.innerHeight;
+
+        const randomX = Math.floor(Math.random() * (viewportWidth - 100));
+        const randomY = Math.floor(Math.random() * (viewportHeight - 40));
+
+        noButton.style.position = 'absolute';
+        noButton.style.left = `${randomX}px`;
+        noButton.style.top = `${randomY}px`;
+      }
+
+      randomPosition(); // Added for random positioning
+    }
+  </script>
+</body>
+</html>
